@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04FE5C640389715B5389197A /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */; };
 		1A64A5CF2410F73400FD65CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64A5CE2410F73400FD65CE /* AppDelegate.swift */; };
 		1A64A5D12410F73400FD65CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64A5D02410F73400FD65CE /* SceneDelegate.swift */; };
 		1A64A5D32410F73400FD65CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64A5D22410F73400FD65CE /* ViewController.swift */; };
 		1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D42410F73400FD65CE /* Main.storyboard */; };
 		1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D72410F73500FD65CE /* Assets.xcassets */; };
 		1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D92410F73500FD65CE /* LaunchScreen.storyboard */; };
+		1A64A5E42410F7B200FD65CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5E32410F7B200FD65CE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		1A64A5D72410F73500FD65CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A64A5DA2410F73500FD65CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A64A5DC2410F73500FD65CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A64A5E32410F7B200FD65CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Dark Sky/Support Files/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
+		D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FE5C640389715B5389197A /* Pods_Dark_Sky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				1A64A5CD2410F73400FD65CE /* Dark Sky */,
 				1A64A5CC2410F73400FD65CE /* Products */,
+				E3F56E7E479AE65667A54412 /* Pods */,
+				298A0800FB9CF9B6075598D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,41 @@
 		1A64A5CD2410F73400FD65CE /* Dark Sky */ = {
 			isa = PBXGroup;
 			children = (
-				1A64A5CE2410F73400FD65CE /* AppDelegate.swift */,
-				1A64A5D02410F73400FD65CE /* SceneDelegate.swift */,
+				1A64A5E22410F77900FD65CE /* Support Files */,
 				1A64A5D22410F73400FD65CE /* ViewController.swift */,
 				1A64A5D42410F73400FD65CE /* Main.storyboard */,
 				1A64A5D72410F73500FD65CE /* Assets.xcassets */,
 				1A64A5D92410F73500FD65CE /* LaunchScreen.storyboard */,
-				1A64A5DC2410F73500FD65CE /* Info.plist */,
 			);
 			path = "Dark Sky";
+			sourceTree = "<group>";
+		};
+		1A64A5E22410F77900FD65CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A64A5DC2410F73500FD65CE /* Info.plist */,
+				1A64A5E32410F7B200FD65CE /* GoogleService-Info.plist */,
+				1A64A5CE2410F73400FD65CE /* AppDelegate.swift */,
+				1A64A5D02410F73400FD65CE /* SceneDelegate.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		298A0800FB9CF9B6075598D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3F56E7E479AE65667A54412 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */,
+				D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A64A5DF2410F73500FD65CE /* Build configuration list for PBXNativeTarget "Dark Sky" */;
 			buildPhases = (
+				608E972C99FDF40E793291C8 /* [CP] Check Pods Manifest.lock */,
 				1A64A5C72410F73400FD65CE /* Sources */,
 				1A64A5C82410F73400FD65CE /* Frameworks */,
 				1A64A5C92410F73400FD65CE /* Resources */,
+				2F9DF8922AFA2F6F29B49D3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +163,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */,
+				1A64A5E42410F7B200FD65CE /* GoogleService-Info.plist in Resources */,
 				1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */,
 				1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F9DF8922AFA2F6F29B49D3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		608E972C99FDF40E793291C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dark Sky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A64A5C72410F73400FD65CE /* Sources */ = {
@@ -282,11 +362,12 @@
 		};
 		1A64A5E02410F73500FD65CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BUFERA4K;
-				INFOPLIST_FILE = "Dark Sky/Info.plist";
+				INFOPLIST_FILE = "Dark Sky/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +381,12 @@
 		};
 		1A64A5E12410F73500FD65CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BUFERA4K;
-				INFOPLIST_FILE = "Dark Sky/Info.plist";
+				INFOPLIST_FILE = "Dark Sky/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
