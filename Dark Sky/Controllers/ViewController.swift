@@ -12,9 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        getLocation()
     }
-
-
+    
+    func getLocation() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.locationManager.requestLocation()
+    }
 }
 

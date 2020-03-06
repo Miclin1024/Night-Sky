@@ -8,16 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		04FE5C640389715B5389197A /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */; };
+		1A13196D2411068800E29903 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A13196C2411068800E29903 /* Weather.swift */; };
+		1A5F910B24110C9D007BEE4E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F910A24110C9D007BEE4E /* Location.swift */; };
+		1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F910C24111046007BEE4E /* GoogleService-Info.plist */; };
+		1A5F910F2411CD28007BEE4E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F910E2411CD28007BEE4E /* Manager.swift */; };
 		1A64A5CF2410F73400FD65CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64A5CE2410F73400FD65CE /* AppDelegate.swift */; };
 		1A64A5D12410F73400FD65CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64A5D02410F73400FD65CE /* SceneDelegate.swift */; };
 		1A64A5D32410F73400FD65CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A64A5D22410F73400FD65CE /* ViewController.swift */; };
 		1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D42410F73400FD65CE /* Main.storyboard */; };
 		1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D72410F73500FD65CE /* Assets.xcassets */; };
 		1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D92410F73500FD65CE /* LaunchScreen.storyboard */; };
-		1A64A5E42410F7B200FD65CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5E32410F7B200FD65CE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A13196C2411068800E29903 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		1A5F910A24110C9D007BEE4E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		1A5F910C24111046007BEE4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A5F910E2411CD28007BEE4E /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		1A64A5CB2410F73400FD65CE /* Dark Sky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Sky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A64A5CE2410F73400FD65CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A64A5D02410F73400FD65CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +33,6 @@
 		1A64A5D72410F73500FD65CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A64A5DA2410F73500FD65CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A64A5DC2410F73500FD65CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A64A5E32410F7B200FD65CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Dark Sky/Support Files/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
 		D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +50,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A131968241105E500E29903 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A13196C2411068800E29903 /* Weather.swift */,
+				1A5F910A24110C9D007BEE4E /* Location.swift */,
+				1A5F910E2411CD28007BEE4E /* Manager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A131969241105FA00E29903 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A13196A2411060100E29903 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A64A5D22410F73400FD65CE /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A13196B2411060E00E29903 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1A64A5C22410F73400FD65CE = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +103,11 @@
 		1A64A5CD2410F73400FD65CE /* Dark Sky */ = {
 			isa = PBXGroup;
 			children = (
+				1A13196B2411060E00E29903 /* Resources */,
+				1A13196A2411060100E29903 /* Controllers */,
+				1A131969241105FA00E29903 /* Views */,
+				1A131968241105E500E29903 /* Models */,
 				1A64A5E22410F77900FD65CE /* Support Files */,
-				1A64A5D22410F73400FD65CE /* ViewController.swift */,
 				1A64A5D42410F73400FD65CE /* Main.storyboard */,
 				1A64A5D72410F73500FD65CE /* Assets.xcassets */,
 				1A64A5D92410F73500FD65CE /* LaunchScreen.storyboard */,
@@ -78,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				1A64A5DC2410F73500FD65CE /* Info.plist */,
-				1A64A5E32410F7B200FD65CE /* GoogleService-Info.plist */,
+				1A5F910C24111046007BEE4E /* GoogleService-Info.plist */,
 				1A64A5CE2410F73400FD65CE /* AppDelegate.swift */,
 				1A64A5D02410F73400FD65CE /* SceneDelegate.swift */,
 			);
@@ -163,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */,
-				1A64A5E42410F7B200FD65CE /* GoogleService-Info.plist in Resources */,
+				1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */,
 				1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */,
 				1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */,
 			);
@@ -218,7 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A13196D2411068800E29903 /* Weather.swift in Sources */,
+				1A5F910F2411CD28007BEE4E /* Manager.swift in Sources */,
 				1A64A5D32410F73400FD65CE /* ViewController.swift in Sources */,
+				1A5F910B24110C9D007BEE4E /* Location.swift in Sources */,
 				1A64A5CF2410F73400FD65CE /* AppDelegate.swift in Sources */,
 				1A64A5D12410F73400FD65CE /* SceneDelegate.swift in Sources */,
 			);

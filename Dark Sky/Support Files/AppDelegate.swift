@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import Firebase
+import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    
+    let notificationCenter = UNUserNotificationCenter.current()
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.delegate = self
         return true
     }
 
@@ -35,3 +46,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            // Update user current location meta stored in Manager.shared.userLocations[0]
+            let geoCoder = CLGeocoder()
+            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+                guard error == nil else {
+                    print("Error retrieving location!")
+                    return
+                }
+                
+                if let placemark = placemarks?.first {
+                    let userCurrLocation = Manager.shared.userLocations[0]
+                    if let town = placemark.locality {
+                        userCurrLocation.name = town
+                    } else {
+                        userCurrLocation.name = "Unknown"
+                    }
+                    userCurrLocation.latitude = location.coordinate.latitude
+                    userCurrLocation.longitude = location.coordinate.longitude
+                    Weather.forcast(location.coordinate.latitude, location.coordinate.longitude, sender: userCurrLocation)
+                }
+            })
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
+}
