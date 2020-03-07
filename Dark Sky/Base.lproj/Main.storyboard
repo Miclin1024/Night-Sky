@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -14,13 +19,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mxs-50-vR8">
+                                <rect key="frame" x="152" y="194" width="110.5" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sMh-Jx-lbI" userLabel="Name" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                        <rect key="frame" x="47.5" y="0.0" width="15.5" height="2.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HMh-XU-eLp" userLabel="Temp" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                        <rect key="frame" x="47.5" y="17.5" width="15.5" height="2.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP7-DD-sge" userLabel="Temp Range" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                <rect key="frame" x="207" y="224" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i72-TG-pcb">
+                                <rect key="frame" x="100" y="294" width="214" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Sxv-jI-Ww6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-oV-HtX" userLabel="Wind Bearing">
+                                <rect key="frame" x="307" y="234" width="52" height="60.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="uyT-mD-WQj">
+                                        <rect key="frame" x="6" y="0.0" width="40.000000000000227" height="40.000000000000227"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0sE-pi-MgP"/>
+                                            <constraint firstAttribute="width" constant="40" id="Kdj-dk-dSf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-ME-bbl" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="52" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.12549019607843137" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nu8-oV-HtX" firstAttribute="leading" secondItem="AP7-DD-sge" secondAttribute="leading" constant="100" id="3Fl-Ko-zxT"/>
+                            <constraint firstItem="Mxs-50-vR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8YH-Ov-giJ"/>
+                            <constraint firstItem="Mxs-50-vR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="EZW-p5-D4C"/>
+                            <constraint firstItem="AP7-DD-sge" firstAttribute="top" secondItem="Mxs-50-vR8" secondAttribute="bottom" constant="10" id="FfL-2y-veN"/>
+                            <constraint firstItem="i72-TG-pcb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUt-vX-CoW"/>
+                            <constraint firstAttribute="trailing" secondItem="i72-TG-pcb" secondAttribute="trailing" constant="100" id="Kck-dS-R30"/>
+                            <constraint firstItem="i72-TG-pcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="QAG-un-tmy"/>
+                            <constraint firstItem="AP7-DD-sge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eT9-e2-R9r"/>
+                            <constraint firstItem="nu8-oV-HtX" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="10" id="gHv-mg-ksy"/>
+                            <constraint firstItem="i72-TG-pcb" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="70" id="inr-bI-EkT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="locationNameLabel" destination="sMh-Jx-lbI" id="lmK-nk-AsB"/>
+                        <outlet property="locationTempLabel" destination="HMh-XU-eLp" id="QZa-IL-t5l"/>
+                        <outlet property="tempRangeLabel" destination="AP7-DD-sge" id="e8w-S5-gdY"/>
+                        <outlet property="weatherTypeImage" destination="i72-TG-pcb" id="yYj-4X-OTY"/>
+                        <outlet property="windBearing" destination="uyT-mD-WQj" id="FlG-eJ-JTF"/>
+                        <outlet property="windSpeedLabel" destination="Aka-ME-bbl" id="thz-69-TLv"/>
+                        <outlet property="windStackView" destination="nu8-oV-HtX" id="vWn-ge-f1r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="windBearing" width="833.5" height="833.5"/>
+    </resources>
 </document>

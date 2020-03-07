@@ -20,7 +20,7 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.12549019607843137" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="izh-Om-CDF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RUi-l4-ReW"/>
                             <constraint firstItem="izh-Om-CDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="gci-Mc-Ec1"/>

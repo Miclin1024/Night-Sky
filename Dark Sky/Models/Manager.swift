@@ -14,11 +14,12 @@ class Manager {
     
     // First location will be user's current location
     var userLocations: [Location]
+    // This is bad practice, but live with it for the moment
+    var viewController: ViewController!
     
     init() {
         let currLocation = Location()
         userLocations = [currLocation]
-        
         self.loadUserLocations()
     }
     

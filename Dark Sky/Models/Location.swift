@@ -15,6 +15,7 @@ class Location {
     var longitude: Double?
     var weather: Weather?
     var name: String
+    weak var delegate: locationUpdateDelegate?
     
     init (withName location: String) {
         self.name = location
@@ -23,7 +24,7 @@ class Location {
     
     // Initialize a placeholder location, waiting to load
     init () {
-        self.name = "Loading"
+        self.name = "--"
     }
     
     func initWithString(with locationString: String, completion: @escaping ()->Void={}) {
