@@ -18,15 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var windBearing: UIImageView!
     @IBOutlet weak var windStackView: UIStackView!
     
-    var activeLocationIndex = 0 {
-        willSet{
-            Manager.shared.userLocations[newValue].delegate = self
-        }
-        
-        didSet{
-            Manager.shared.userLocations[oldValue].delegate = nil
-        }
-    }
+    var activeLocationIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +27,6 @@ class ViewController: UIViewController {
         tempRangeLabel.setFont(toType: .Light, toSize: 18)
         tempRangeLabel.textColor = .white
         windSpeedLabel.setFont(toType: .Semibold, toSize: 14)
-        
-        Manager.shared.userLocations[activeLocationIndex].delegate = self
-        getLocation()
-    }
-    
-    func getLocation() {
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        delegate.locationManager.requestLocation()
     }
     
     func getWobbleAnimation(withInitialRotation angle: CGFloat) -> CAKeyframeAnimation {
@@ -69,7 +53,6 @@ extension ViewController: locationUpdateDelegate {
                 self.locationTempLabel.text = String(Int(weather.temperature)) + "°"
             }, completion: nil)
             
-            print(weather.windBearing)
             self.weatherTypeImage.image = UIImage(named: weather.weatherType.rawValue)
         
             self.windSpeedLabel.text = String(Int(weather.windSpeed)) + " MPH"

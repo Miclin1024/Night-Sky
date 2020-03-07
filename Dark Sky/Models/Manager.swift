@@ -14,10 +14,11 @@ class Manager {
     
     // First location will be user's current location
     var userLocations: [Location]
-    // This is bad practice, but live with it for the moment
-    var viewController: ViewController!
+    
+    var currActiveIndex: Int
     
     init() {
+        self.currActiveIndex = 0
         let currLocation = Location()
         userLocations = [currLocation]
         self.loadUserLocations()
@@ -25,6 +26,7 @@ class Manager {
     
     func loadUserLocations() {
         let locations = UserDefaults.standard.object(forKey: "UserLocations") as? [String]
+        userLocations.append(Location(withName: "Oakland"))
         if let locations = locations {
             for name in locations {
                 if !userLocations.contains(where: { loc in
