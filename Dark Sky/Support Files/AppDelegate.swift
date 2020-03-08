@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import CoreLocation
 import UserNotifications
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let notificationCenter = UNUserNotificationCenter.current()
     let locationManager = CLLocationManager()
+    var weatherKEY: String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        
+        var secrets: NSDictionary?
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist") {
+            secrets = NSDictionary(contentsOfFile: path)!
+           
+           // API KEY MUST BE PRESENT
+            GMSPlacesClient.provideAPIKey(secrets!.object(forKey: "GMS_API_KEY") as! String)
+            
+            weatherKEY = secrets!.object(forKey: "DARK_SKY_API_KEY") as? String
+        }
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startMonitoringSignificantLocationChanges()

@@ -8,16 +8,20 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, pageViewUpdateDelegate {
     
-    lazy var orderedVC:[ViewController] = {
-        var res: [ViewController] = [UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "currentLocation")]
-        for i in 1 ..< Manager.shared.userLocations.count {
-            res.append(self.newVC(index: i))
+    var pageControl = UIPageControl()
+    
+    var orderedVC:[ViewController] {
+        get {
+            var res: [ViewController] = [UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "currentLocation")]
+            for i in 1 ..< Manager.shared.userLocations.count {
+                res.append(self.newVC(index: i))
+            }
+            
+            return res
         }
-        
-        return res
-    }()
+    }
     
     func newVC(index: Int) -> ViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "custom") as! ViewController
@@ -25,9 +29,21 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return sb
     }
     
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        self.pageControl.numberOfPages = orderedVC.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.lightGray
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.white
+        self.view.addSubview(pageControl)
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         let firstVC = pendingViewControllers.first as! ViewController
         let index = firstVC.activeLocationIndex
+        self.pageControl.currentPage = index
         Manager.shared.currActiveIndex = index
         Manager.shared.userLocations[index].delegate = firstVC
         Weather.forcast(withLocation: Manager.shared.userLocations[index])
@@ -56,15 +72,24 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         }
     }
     
+    func didAddUserLocation() {
+        self.pageControl.numberOfPages = orderedVC.count
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.dataSource = self
         self.delegate = self
+        Manager.shared.delegate = self
+        configurePageControl()
         if let currentVC = orderedVC.first {
             Manager.shared.userLocations[0].delegate = currentVC
             setViewControllers([currentVC], direction: .forward, animated: true, completion: nil)
         }
     }
+}
+
+protocol pageViewUpdateDelegate: AnyObject {
+    func didAddUserLocation()
 }

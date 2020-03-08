@@ -17,9 +17,9 @@ class Location {
     var name: String
     weak var delegate: locationUpdateDelegate?
     
-    init (withName location: String) {
+    init (withName location: String, completion: @escaping (Location)->Void={_ in}) {
         self.name = location
-        initWithString(with: location)
+        initWithString(with: location, completion: completion)
     }
     
     // Initialize a placeholder location, waiting to load
@@ -27,7 +27,7 @@ class Location {
         self.name = "--"
     }
     
-    func initWithString(with locationString: String, completion: @escaping ()->Void={}) {
+    func initWithString(with locationString: String, completion: @escaping (Location)->Void={_ in}) {
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(locationString) { (placemarks, error) in
             if let placemark = placemarks?.first {
@@ -42,7 +42,7 @@ class Location {
                 }
             }
             
-            completion()
+            completion(self)
         }
     }
 }

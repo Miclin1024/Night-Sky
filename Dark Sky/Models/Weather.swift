@@ -12,7 +12,12 @@ import UIKit
 
 class Weather: Decodable {
     
-    static let BASE_PATH = "https://api.darksky.net/forecast/8f29427ca29491526c2bc60fcbc9afdc/"
+    static var BASE_PATH: String {
+        get {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return "https://api.darksky.net/forecast/" + appDelegate.weatherKEY + "/"
+        }
+    }
     
     let temperature: Double
     let icon: String
@@ -108,8 +113,8 @@ class Weather: Decodable {
         if let latitude = location.latitude, let longitude = location.longitude {
             forcast(latitude, longitude, sender: location, completion: completion)
         } else {
-            location.initWithString(with: location.name, completion: {
-                forcast(withLocation: location)
+            location.initWithString(with: location.name, completion: { loc in
+                forcast(withLocation: loc)
             })
         }
     }

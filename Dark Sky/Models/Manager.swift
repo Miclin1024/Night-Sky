@@ -12,6 +12,8 @@ class Manager {
     
     static let shared = Manager()
     
+    weak var delegate: pageViewUpdateDelegate?
+    
     // First location will be user's current location
     var userLocations: [Location]
     
@@ -19,6 +21,8 @@ class Manager {
     
     init() {
         self.currActiveIndex = 0
+        
+        // A placeholder location
         let currLocation = Location()
         userLocations = [currLocation]
         self.loadUserLocations()
@@ -26,7 +30,6 @@ class Manager {
     
     func loadUserLocations() {
         let locations = UserDefaults.standard.object(forKey: "UserLocations") as? [String]
-        userLocations.append(Location(withName: "Oakland"))
         if let locations = locations {
             for name in locations {
                 if !userLocations.contains(where: { loc in
@@ -35,6 +38,20 @@ class Manager {
                     userLocations.append(Location(withName: name))
                 }
             }
+        } else {
+            print("User Default format error!")
+        }
+    }
+    
+    func addUserLocation(name: String) {
+        let prev = UserDefaults.standard.object(forKey: "UserLocations") as? [String]
+        if var prev = prev {
+            if !prev.contains(name) {
+                prev.append(name)
+                UserDefaults.standard.set(prev, forKey: "UserLocations")
+            }
+        } else {
+            print("User Default format error!")
         }
     }
 }
