@@ -27,6 +27,9 @@
 		1AA2D96724138AF000CF5FC1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96624138AF000CF5FC1 /* PageViewController.swift */; };
 		1AA2D969241435DD00CF5FC1 /* CustomLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */; };
 		1AA2D96B24144C9700CF5FC1 /* CurrentLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96A24144C9700CF5FC1 /* CurrentLocationVC.swift */; };
+		1AA2D96F2414653000CF5FC1 /* LocationSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */; };
+		1AA2D9712414755500CF5FC1 /* SearchResTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D9702414755500CF5FC1 /* SearchResTableViewCell.swift */; };
+		1AA2D9752414F46000CF5FC1 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2D9742414F46000CF5FC1 /* Secrets.plist */; };
 		1AFC2E662412163B0066254E /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */; };
 		1AFC2E682412255B0066254E /* UIView - Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC2E672412255B0066254E /* UIView - Ext.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,9 @@
 		1AA2D96624138AF000CF5FC1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationVC.swift; sourceTree = "<group>"; };
 		1AA2D96A24144C9700CF5FC1 /* CurrentLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationVC.swift; sourceTree = "<group>"; };
+		1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchVC.swift; sourceTree = "<group>"; };
+		1AA2D9702414755500CF5FC1 /* SearchResTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResTableViewCell.swift; sourceTree = "<group>"; };
+		1AA2D9742414F46000CF5FC1 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		1AFC2E672412255B0066254E /* UIView - Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView - Ext.swift"; sourceTree = "<group>"; };
 		6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +93,7 @@
 			children = (
 				1A5F911C2411EE36007BEE4E /* DataDisplayUILabel.swift */,
 				1AFC2E672412255B0066254E /* UIView - Ext.swift */,
+				1AA2D9702414755500CF5FC1 /* SearchResTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 				1AA2D96A24144C9700CF5FC1 /* CurrentLocationVC.swift */,
 				1AA2D96624138AF000CF5FC1 /* PageViewController.swift */,
 				1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */,
+				1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				1A5F910C24111046007BEE4E /* GoogleService-Info.plist */,
 				1A64A5CE2410F73400FD65CE /* AppDelegate.swift */,
 				1A64A5D02410F73400FD65CE /* SceneDelegate.swift */,
+				1AA2D9742414F46000CF5FC1 /* Secrets.plist */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -196,6 +205,7 @@
 				1A64A5C82410F73400FD65CE /* Frameworks */,
 				1A64A5C92410F73400FD65CE /* Resources */,
 				2F9DF8922AFA2F6F29B49D3B /* [CP] Embed Pods Frameworks */,
+				04F0F2FFC62F207115E05E65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */,
+				1AA2D9752414F46000CF5FC1 /* Secrets.plist in Resources */,
 				1A5F91132411ED68007BEE4E /* SF-Pro-Text-Bold.otf in Resources */,
 				1A5F91182411ED8E007BEE4E /* SF-Pro-Text-Thin.otf in Resources */,
 				1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */,
@@ -260,6 +271,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04F0F2FFC62F207115E05E65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2F9DF8922AFA2F6F29B49D3B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,8 +341,10 @@
 				1AFC2E682412255B0066254E /* UIView - Ext.swift in Sources */,
 				1A5F910B24110C9D007BEE4E /* Location.swift in Sources */,
 				1AA2D96724138AF000CF5FC1 /* PageViewController.swift in Sources */,
+				1AA2D9712414755500CF5FC1 /* SearchResTableViewCell.swift in Sources */,
 				1A64A5CF2410F73400FD65CE /* AppDelegate.swift in Sources */,
 				1AA2D96B24144C9700CF5FC1 /* CurrentLocationVC.swift in Sources */,
+				1AA2D96F2414653000CF5FC1 /* LocationSearchVC.swift in Sources */,
 				1AA2D969241435DD00CF5FC1 /* CustomLocationVC.swift in Sources */,
 				1A64A5D12410F73400FD65CE /* SceneDelegate.swift in Sources */,
 			);
