@@ -29,7 +29,7 @@ class Manager {
     }
     
     func loadUserLocations() {
-        let locations = UserDefaults.standard.object(forKey: "UserLocations") as? [String]
+        let locations = UserDefaults.standard.stringArray(forKey: "UserLocations")
         if let locations = locations {
             for name in locations {
                 if !userLocations.contains(where: { loc in
@@ -38,20 +38,18 @@ class Manager {
                     userLocations.append(Location(withName: name))
                 }
             }
-        } else {
-            print("User Default format error!")
         }
     }
     
     func addUserLocation(name: String) {
-        let prev = UserDefaults.standard.object(forKey: "UserLocations") as? [String]
+        let prev = UserDefaults.standard.stringArray(forKey: "UserLocations")
         if var prev = prev {
             if !prev.contains(name) {
                 prev.append(name)
                 UserDefaults.standard.set(prev, forKey: "UserLocations")
             }
         } else {
-            print("User Default format error!")
+            UserDefaults.standard.set([name], forKey: "UserLocations")
         }
     }
 }

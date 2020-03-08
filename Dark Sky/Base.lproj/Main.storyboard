@@ -21,7 +21,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="dNl-Mz-NgI" customClass="PageViewController" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2S-CY-3nu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729" y="138"/>
+            <point key="canvasLocation" x="-794" y="-271"/>
         </scene>
         <!--Current LocationVC-->
         <scene sceneID="tne-QT-ifu">
@@ -62,6 +62,12 @@
                                     <constraint firstAttribute="height" constant="150" id="Sxv-jI-Ww6"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0y-gX-XtI" userLabel="Weather" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                <rect key="frame" x="186" y="459" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-oV-HtX" userLabel="Wind Bearing">
                                 <rect key="frame" x="307" y="234" width="52" height="60.5"/>
                                 <subviews>
@@ -98,12 +104,14 @@
                             <constraint firstItem="Mxs-50-vR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8YH-Ov-giJ"/>
                             <constraint firstItem="Mxs-50-vR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="EZW-p5-D4C"/>
                             <constraint firstItem="AP7-DD-sge" firstAttribute="top" secondItem="Mxs-50-vR8" secondAttribute="bottom" constant="10" id="FfL-2y-veN"/>
+                            <constraint firstItem="s0y-gX-XtI" firstAttribute="top" secondItem="i72-TG-pcb" secondAttribute="bottom" constant="15" id="Fls-Ib-mVu"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUt-vX-CoW"/>
                             <constraint firstAttribute="trailing" secondItem="i72-TG-pcb" secondAttribute="trailing" constant="100" id="Kck-dS-R30"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="QAG-un-tmy"/>
                             <constraint firstItem="AP7-DD-sge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eT9-e2-R9r"/>
                             <constraint firstItem="nu8-oV-HtX" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="10" id="gHv-mg-ksy"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="70" id="inr-bI-EkT"/>
+                            <constraint firstItem="s0y-gX-XtI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="irE-ZI-izr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -111,6 +119,7 @@
                         <outlet property="locationNameLabel" destination="sMh-Jx-lbI" id="lmK-nk-AsB"/>
                         <outlet property="locationTempLabel" destination="HMh-XU-eLp" id="QZa-IL-t5l"/>
                         <outlet property="tempRangeLabel" destination="AP7-DD-sge" id="e8w-S5-gdY"/>
+                        <outlet property="weather" destination="s0y-gX-XtI" id="kKl-i9-GbY"/>
                         <outlet property="weatherTypeImage" destination="i72-TG-pcb" id="yYj-4X-OTY"/>
                         <outlet property="windBearing" destination="uyT-mD-WQj" id="FlG-eJ-JTF"/>
                         <outlet property="windSpeedLabel" destination="Aka-ME-bbl" id="thz-69-TLv"/>
@@ -135,27 +144,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuV-PT-x4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="138"/>
+            <point key="canvasLocation" x="1135" y="-271"/>
         </scene>
-        <!--Custom LocationVC-->
-        <scene sceneID="BNZ-Fs-pVN">
+        <!--Current LocationVC-->
+        <scene sceneID="TGr-uG-yLL">
             <objects>
-                <viewController storyboardIdentifier="custom" id="mUe-Oe-zNv" customClass="CustomLocationVC" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xg8-iM-m0k">
+                <viewController storyboardIdentifier="custom" id="rz8-AV-Bsw" customClass="CurrentLocationVC" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7V-8r-eFy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3RN-sx-MbC">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-vO-34L">
                                 <rect key="frame" x="152" y="194" width="110.5" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="552-Jr-LNK" userLabel="Name" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4qf-HX-RwU" userLabel="Name" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
                                         <rect key="frame" x="47.5" y="0.0" width="15.5" height="2.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BC7-l5-9XE" userLabel="Temp" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VOP-RJ-Fwm" userLabel="Temp" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
                                         <rect key="frame" x="47.5" y="17.5" width="15.5" height="2.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -164,29 +173,35 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB0-L4-ibO" userLabel="Temp Range" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLa-G7-nPg" userLabel="Temp Range" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
                                 <rect key="frame" x="207" y="224" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bbr-sh-7vJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9f1-aX-ZnK">
                                 <rect key="frame" x="100" y="294" width="214" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="zf5-AH-Z9J"/>
+                                    <constraint firstAttribute="height" constant="150" id="rQI-or-xZg"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nlk-fJ-zjH" userLabel="Wind Bearing">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qs-PA-aGl" userLabel="Weather" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                <rect key="frame" x="186" y="459" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-ej-vag" userLabel="Wind Bearing">
                                 <rect key="frame" x="307" y="234" width="52" height="60.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="4yw-R0-ehh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-oc-sdZ">
                                         <rect key="frame" x="6" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="0jv-lF-Khw"/>
-                                            <constraint firstAttribute="width" constant="40" id="cQ2-ex-n5G"/>
+                                            <constraint firstAttribute="width" constant="40" id="glF-Jb-QcK"/>
+                                            <constraint firstAttribute="height" constant="40" id="jL7-4b-IC7"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIQ-q1-JfC" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="now-uO-Vxi" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="52" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,38 +209,55 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XV-c1-zce">
+                                <rect key="frame" x="357" y="825" width="31" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
+                                <state key="normal" title="􀁌">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ULI-HT-lST" kind="show" id="lvb-Ph-hyd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.12549019610000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Bbr-sh-7vJ" secondAttribute="trailing" constant="100" id="0Bs-XP-wFO"/>
-                            <constraint firstItem="3RN-sx-MbC" firstAttribute="centerX" secondItem="xg8-iM-m0k" secondAttribute="centerX" id="5aq-AP-rNG"/>
-                            <constraint firstItem="xB0-L4-ibO" firstAttribute="top" secondItem="3RN-sx-MbC" secondAttribute="bottom" constant="10" id="Gxe-Rv-ofE"/>
-                            <constraint firstItem="xB0-L4-ibO" firstAttribute="centerX" secondItem="xg8-iM-m0k" secondAttribute="centerX" id="UDi-Rf-tyf"/>
-                            <constraint firstItem="Bbr-sh-7vJ" firstAttribute="top" secondItem="xB0-L4-ibO" secondAttribute="bottom" constant="70" id="Wf0-74-dsN"/>
-                            <constraint firstItem="Bbr-sh-7vJ" firstAttribute="leading" secondItem="xg8-iM-m0k" secondAttribute="leading" constant="100" id="dCk-Ig-9vP"/>
-                            <constraint firstItem="3RN-sx-MbC" firstAttribute="top" secondItem="6of-HK-owI" secondAttribute="top" constant="150" id="dRi-Kj-g3m"/>
-                            <constraint firstItem="nlk-fJ-zjH" firstAttribute="leading" secondItem="xB0-L4-ibO" secondAttribute="leading" constant="100" id="iwe-Wx-SiM"/>
-                            <constraint firstItem="Bbr-sh-7vJ" firstAttribute="centerX" secondItem="xg8-iM-m0k" secondAttribute="centerX" id="whJ-U4-uik"/>
-                            <constraint firstItem="nlk-fJ-zjH" firstAttribute="top" secondItem="xB0-L4-ibO" secondAttribute="bottom" constant="10" id="zXC-kg-WTB"/>
+                            <constraint firstItem="8Qs-PA-aGl" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="29Z-qm-FsS"/>
+                            <constraint firstAttribute="trailing" secondItem="9f1-aX-ZnK" secondAttribute="trailing" constant="100" id="46a-rq-aGU"/>
+                            <constraint firstItem="XLa-G7-nPg" firstAttribute="top" secondItem="tLH-vO-34L" secondAttribute="bottom" constant="10" id="71g-BO-qmI"/>
+                            <constraint firstItem="XLa-G7-nPg" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="9Xs-Xl-jMe"/>
+                            <constraint firstItem="D8g-ej-vag" firstAttribute="top" secondItem="XLa-G7-nPg" secondAttribute="bottom" constant="10" id="B8x-Fw-bfz"/>
+                            <constraint firstItem="9f1-aX-ZnK" firstAttribute="top" secondItem="XLa-G7-nPg" secondAttribute="bottom" constant="70" id="DHv-qW-ekn"/>
+                            <constraint firstItem="tLH-vO-34L" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="EO8-xf-byj"/>
+                            <constraint firstItem="8Qs-PA-aGl" firstAttribute="top" secondItem="9f1-aX-ZnK" secondAttribute="bottom" constant="15" id="TMT-lR-zS7"/>
+                            <constraint firstItem="D8g-ej-vag" firstAttribute="leading" secondItem="XLa-G7-nPg" secondAttribute="leading" constant="100" id="eZo-mk-B6K"/>
+                            <constraint firstItem="9f1-aX-ZnK" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="shC-ty-m6B"/>
+                            <constraint firstItem="9f1-aX-ZnK" firstAttribute="leading" secondItem="Z7V-8r-eFy" secondAttribute="leading" constant="100" id="w93-st-IrT"/>
+                            <constraint firstItem="tLH-vO-34L" firstAttribute="top" secondItem="Fft-ER-JrS" secondAttribute="top" constant="150" id="wAq-Xr-dtn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6of-HK-owI"/>
+                        <viewLayoutGuide key="safeArea" id="Fft-ER-JrS"/>
                     </view>
                     <connections>
-                        <outlet property="locationNameLabel" destination="552-Jr-LNK" id="0QS-0Q-FHQ"/>
-                        <outlet property="locationTempLabel" destination="BC7-l5-9XE" id="An7-2a-Icf"/>
-                        <outlet property="tempRangeLabel" destination="xB0-L4-ibO" id="oey-Bw-oTn"/>
-                        <outlet property="weatherTypeImage" destination="Bbr-sh-7vJ" id="c5H-uU-DUz"/>
-                        <outlet property="windBearing" destination="4yw-R0-ehh" id="rl8-tv-ENm"/>
-                        <outlet property="windSpeedLabel" destination="OIQ-q1-JfC" id="Jvz-PP-137"/>
-                        <outlet property="windStackView" destination="nlk-fJ-zjH" id="mqE-Oy-7Hb"/>
+                        <outlet property="locationNameLabel" destination="4qf-HX-RwU" id="oTu-pW-hev"/>
+                        <outlet property="locationTempLabel" destination="VOP-RJ-Fwm" id="OQH-VS-UAp"/>
+                        <outlet property="tempRangeLabel" destination="XLa-G7-nPg" id="4Pc-vT-unx"/>
+                        <outlet property="weather" destination="8Qs-PA-aGl" id="7Hq-lA-T6F"/>
+                        <outlet property="weatherTypeImage" destination="9f1-aX-ZnK" id="7cq-x6-Pbu"/>
+                        <outlet property="windBearing" destination="JlH-oc-sdZ" id="fpY-3d-J3o"/>
+                        <outlet property="windSpeedLabel" destination="now-uO-Vxi" id="Chr-CG-HPU"/>
+                        <outlet property="windStackView" destination="D8g-ej-vag" id="E6s-iM-Epg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zZR-ZM-PMG" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7BG-d3-JVb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="-553"/>
+            <point key="canvasLocation" x="138" y="-572"/>
         </scene>
     </scenes>
     <resources>
         <image name="windBearing" width="833.5" height="833.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lvb-Ph-hyd"/>
+    </inferredMetricsTieBreakers>
 </document>

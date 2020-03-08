@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var windSpeedLabel: DataDisplayUILabel!
     @IBOutlet weak var windBearing: UIImageView!
     @IBOutlet weak var windStackView: UIStackView!
+    @IBOutlet weak var weather: DataDisplayUILabel!
     
     var activeLocationIndex = 0
     
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
         tempRangeLabel.setFont(toType: .Light, toSize: 18)
         tempRangeLabel.textColor = .white
         windSpeedLabel.setFont(toType: .Semibold, toSize: 14)
+        weather.setFont(toType: .Semibold, toSize: 17)
     }
     
     func getWobbleAnimation(withInitialRotation angle: CGFloat) -> CAKeyframeAnimation {
@@ -57,6 +59,8 @@ extension ViewController: locationUpdateDelegate {
         
             self.windSpeedLabel.text = String(Int(weather.windSpeed)) + " MPH"
        
+            let weatherText = weather.icon.replacingOccurrences(of: "-", with: " ").capitalized
+            self.weather.text = weatherText
         
             self.windBearing.transform = CGAffineTransform(rotationAngle: (CGFloat(weather.windBearing) * .pi) / 180)
             self.windBearing.layer.add(self.getWobbleAnimation(withInitialRotation: CGFloat(weather.windBearing) * .pi / 180), forKey: "transform")
@@ -64,6 +68,7 @@ extension ViewController: locationUpdateDelegate {
             UIView.animate(withDuration: 0.5, animations: {
                 self.weatherTypeImage.alpha = 1
                 self.windStackView.alpha = 1
+                self.weather.alpha = 1
             })
         }
     }
