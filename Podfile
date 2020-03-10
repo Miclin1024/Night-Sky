@@ -6,12 +6,7 @@ target 'Dark Sky' do
   use_frameworks!
 
   # Pods for Dark Sky
-  pod 'Cartography'
-  pod 'Kingfisher'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'
-  pod 'Firebase/Storage'
+  pod 'lottie-ios'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
 

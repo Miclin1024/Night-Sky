@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 import CoreLocation
 import UserNotifications
 import GooglePlaces
@@ -22,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var weatherKEY: String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        FirebaseApp.configure()
         
         var secrets: NSDictionary?
         if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist") {

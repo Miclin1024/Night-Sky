@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, locationUpdateDelegate {
 
     @IBOutlet weak var locationNameLabel: DataDisplayUILabel!
     @IBOutlet weak var locationTempLabel: DataDisplayUILabel!
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var windStackView: UIStackView!
     @IBOutlet weak var weather: DataDisplayUILabel!
     
-    var activeLocationIndex = 0
+    var selfLocation: Location!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +40,7 @@ class ViewController: UIViewController {
         animation.repeatCount = Float.infinity
         return animation
     }
-}
-
-extension ViewController: locationUpdateDelegate {
+    
     func didUpdateWeather(sender: Location) {
         guard let weather = sender.weather else {return}
         DispatchQueue.main.async {

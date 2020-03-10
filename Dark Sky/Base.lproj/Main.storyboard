@@ -15,6 +15,31 @@
         </array>
     </customFonts>
     <scenes>
+        <!--SplashVC-->
+        <scene sceneID="j5M-q6-oXN">
+            <objects>
+                <viewController id="cef-1d-3p2" customClass="SplashVC" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EpT-kK-D0y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-04-bGk" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
+                                <rect key="frame" x="186" y="92" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.12549019607843137" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B70-HD-vat"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcS-4Q-2CM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1596" y="-271"/>
+        </scene>
         <!--Page View Controller-->
         <scene sceneID="UiU-Ro-7Px">
             <objects>
@@ -146,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="1135" y="-271"/>
         </scene>
-        <!--Current LocationVC-->
+        <!--Custom LocationVC-->
         <scene sceneID="TGr-uG-yLL">
             <objects>
-                <viewController storyboardIdentifier="custom" id="rz8-AV-Bsw" customClass="CurrentLocationVC" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="custom" id="rz8-AV-Bsw" customClass="CustomLocationVC" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7V-8r-eFy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,27 +234,43 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XV-c1-zce">
-                                <rect key="frame" x="357" y="825" width="31" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
-                                <state key="normal" title="􀁌">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ULI-HT-lST" kind="show" id="lvb-Ph-hyd"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-hN-tKt">
+                                <rect key="frame" x="364" y="790" width="30" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cag-zP-Znk">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="43"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="25"/>
+                                        <state key="normal" title="􀁎">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="delCustomLocationCallback:" destination="rz8-AV-Bsw" eventType="touchUpInside" id="FTq-PZ-hIi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XV-c1-zce">
+                                        <rect key="frame" x="0.0" y="43" width="30" height="43"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
+                                        <state key="normal" title="􀁌">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ULI-HT-lST" kind="show" id="lvb-Ph-hyd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.12549019610000001" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8Qs-PA-aGl" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="29Z-qm-FsS"/>
                             <constraint firstAttribute="trailing" secondItem="9f1-aX-ZnK" secondAttribute="trailing" constant="100" id="46a-rq-aGU"/>
+                            <constraint firstItem="Fft-ER-JrS" firstAttribute="trailing" secondItem="OZq-hN-tKt" secondAttribute="trailing" constant="20" id="4gS-Wu-nim"/>
                             <constraint firstItem="XLa-G7-nPg" firstAttribute="top" secondItem="tLH-vO-34L" secondAttribute="bottom" constant="10" id="71g-BO-qmI"/>
                             <constraint firstItem="XLa-G7-nPg" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="9Xs-Xl-jMe"/>
                             <constraint firstItem="D8g-ej-vag" firstAttribute="top" secondItem="XLa-G7-nPg" secondAttribute="bottom" constant="10" id="B8x-Fw-bfz"/>
                             <constraint firstItem="9f1-aX-ZnK" firstAttribute="top" secondItem="XLa-G7-nPg" secondAttribute="bottom" constant="70" id="DHv-qW-ekn"/>
                             <constraint firstItem="tLH-vO-34L" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="EO8-xf-byj"/>
+                            <constraint firstAttribute="bottom" secondItem="OZq-hN-tKt" secondAttribute="bottom" constant="20" id="OIW-Xs-Hqb"/>
                             <constraint firstItem="8Qs-PA-aGl" firstAttribute="top" secondItem="9f1-aX-ZnK" secondAttribute="bottom" constant="15" id="TMT-lR-zS7"/>
                             <constraint firstItem="D8g-ej-vag" firstAttribute="leading" secondItem="XLa-G7-nPg" secondAttribute="leading" constant="100" id="eZo-mk-B6K"/>
                             <constraint firstItem="9f1-aX-ZnK" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="shC-ty-m6B"/>

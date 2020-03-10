@@ -28,6 +28,10 @@ class Manager {
         self.loadUserLocations()
     }
     
+    func getIndex(ofLocation location: Location) -> Int? {
+        return userLocations.firstIndex(of: location)
+    }
+    
     func loadUserLocations() {
         let locations = UserDefaults.standard.stringArray(forKey: "UserLocations")
         if let locations = locations {
@@ -50,6 +54,14 @@ class Manager {
             }
         } else {
             UserDefaults.standard.set([name], forKey: "UserLocations")
+        }
+    }
+    
+    func delUserLocation(atIndex index: Int) {
+        let prev = UserDefaults.standard.stringArray(forKey: "UserLocations")
+        if var prev = prev {
+            prev.remove(at: index - 1)
+            UserDefaults.standard.set(prev, forKey: "UserLocations")
         }
     }
 }

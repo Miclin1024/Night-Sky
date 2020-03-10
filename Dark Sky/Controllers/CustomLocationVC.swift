@@ -13,6 +13,9 @@ class CustomLocationVC: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func delCustomLocationCallback(_ sender: Any) {
+        Manager.shared.delegate?.didDelUserLocation(delIndex: selfLocation.selfIndex)
     }
 }

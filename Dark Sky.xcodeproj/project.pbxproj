@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04FE5C640389715B5389197A /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */; };
+		1A0D8A6824170D7A00075DC8 /* stillLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A0D8A6724170D7A00075DC8 /* stillLoading.json */; };
 		1A13196D2411068800E29903 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A13196C2411068800E29903 /* Weather.swift */; };
 		1A5F910B24110C9D007BEE4E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F910A24110C9D007BEE4E /* Location.swift */; };
 		1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F910C24111046007BEE4E /* GoogleService-Info.plist */; };
@@ -24,17 +24,21 @@
 		1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D42410F73400FD65CE /* Main.storyboard */; };
 		1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D72410F73500FD65CE /* Assets.xcassets */; };
 		1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D92410F73500FD65CE /* LaunchScreen.storyboard */; };
+		1A7BC1D82416E85C008FA902 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BC1D72416E85C008FA902 /* SplashVC.swift */; };
+		1A7BC1DA2416E91D008FA902 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BC1D92416E91D008FA902 /* loading.json */; };
 		1AA2D96724138AF000CF5FC1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96624138AF000CF5FC1 /* PageViewController.swift */; };
 		1AA2D969241435DD00CF5FC1 /* CustomLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */; };
 		1AA2D96B24144C9700CF5FC1 /* CurrentLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96A24144C9700CF5FC1 /* CurrentLocationVC.swift */; };
 		1AA2D96F2414653000CF5FC1 /* LocationSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */; };
-		1AA2D9712414755500CF5FC1 /* SearchResTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D9702414755500CF5FC1 /* SearchResTableViewCell.swift */; };
 		1AA2D9752414F46000CF5FC1 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2D9742414F46000CF5FC1 /* Secrets.plist */; };
 		1AFC2E662412163B0066254E /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */; };
 		1AFC2E682412255B0066254E /* UIView - Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC2E672412255B0066254E /* UIView - Ext.swift */; };
+		C44D603D77EE27C34074DF05 /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D250FA1C8F5D9106F2D220 /* Pods_Dark_Sky.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F5A00FC4CC96BCB62FFB73 /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
+		1A0D8A6724170D7A00075DC8 /* stillLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stillLoading.json; sourceTree = "<group>"; };
 		1A13196C2411068800E29903 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		1A5F910A24110C9D007BEE4E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		1A5F910C24111046007BEE4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -53,17 +57,17 @@
 		1A64A5D72410F73500FD65CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A64A5DA2410F73500FD65CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A64A5DC2410F73500FD65CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A7BC1D72416E85C008FA902 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		1A7BC1D92416E91D008FA902 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		1AA2D96624138AF000CF5FC1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationVC.swift; sourceTree = "<group>"; };
 		1AA2D96A24144C9700CF5FC1 /* CurrentLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationVC.swift; sourceTree = "<group>"; };
 		1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchVC.swift; sourceTree = "<group>"; };
-		1AA2D9702414755500CF5FC1 /* SearchResTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResTableViewCell.swift; sourceTree = "<group>"; };
 		1AA2D9742414F46000CF5FC1 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		1AFC2E672412255B0066254E /* UIView - Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView - Ext.swift"; sourceTree = "<group>"; };
-		6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
-		D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
+		34D250FA1C8F5D9106F2D220 /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB18FE582D52368284289384 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FE5C640389715B5389197A /* Pods_Dark_Sky.framework in Frameworks */,
+				C44D603D77EE27C34074DF05 /* Pods_Dark_Sky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +97,6 @@
 			children = (
 				1A5F911C2411EE36007BEE4E /* DataDisplayUILabel.swift */,
 				1AFC2E672412255B0066254E /* UIView - Ext.swift */,
-				1AA2D9702414755500CF5FC1 /* SearchResTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +109,7 @@
 				1AA2D96624138AF000CF5FC1 /* PageViewController.swift */,
 				1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */,
 				1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */,
+				1A7BC1D72416E85C008FA902 /* SplashVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +117,7 @@
 		1A13196B2411060E00E29903 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A7BC1D42416E661008FA902 /* Animations */,
 				1A5F91112411EBD1007BEE4E /* Fonts */,
 				1A64A5D72410F73500FD65CE /* Assets.xcassets */,
 			);
@@ -138,7 +143,7 @@
 				1A64A5CD2410F73400FD65CE /* Dark Sky */,
 				1A64A5CC2410F73400FD65CE /* Products */,
 				E3F56E7E479AE65667A54412 /* Pods */,
-				298A0800FB9CF9B6075598D5 /* Frameworks */,
+				2A52E4394FADFC65797940A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,10 +181,19 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
-		298A0800FB9CF9B6075598D5 /* Frameworks */ = {
+		1A7BC1D42416E661008FA902 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				6102641E77D70E8423E630FA /* Pods_Dark_Sky.framework */,
+				1A0D8A6724170D7A00075DC8 /* stillLoading.json */,
+				1A7BC1D92416E91D008FA902 /* loading.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		2A52E4394FADFC65797940A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34D250FA1C8F5D9106F2D220 /* Pods_Dark_Sky.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,8 +201,8 @@
 		E3F56E7E479AE65667A54412 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */,
-				D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */,
+				01F5A00FC4CC96BCB62FFB73 /* Pods-Dark Sky.debug.xcconfig */,
+				BB18FE582D52368284289384 /* Pods-Dark Sky.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -200,12 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A64A5DF2410F73500FD65CE /* Build configuration list for PBXNativeTarget "Dark Sky" */;
 			buildPhases = (
-				608E972C99FDF40E793291C8 /* [CP] Check Pods Manifest.lock */,
+				FF5B412283248DE1C765FAC2 /* [CP] Check Pods Manifest.lock */,
 				1A64A5C72410F73400FD65CE /* Sources */,
 				1A64A5C82410F73400FD65CE /* Frameworks */,
 				1A64A5C92410F73400FD65CE /* Resources */,
-				2F9DF8922AFA2F6F29B49D3B /* [CP] Embed Pods Frameworks */,
-				04F0F2FFC62F207115E05E65 /* [CP] Copy Pods Resources */,
+				9EE96B9B15D40F6E74E38153 /* [CP] Embed Pods Frameworks */,
+				4939240FD248873FAD15DA78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +270,7 @@
 			files = (
 				1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */,
 				1AA2D9752414F46000CF5FC1 /* Secrets.plist in Resources */,
+				1A7BC1DA2416E91D008FA902 /* loading.json in Resources */,
 				1A5F91132411ED68007BEE4E /* SF-Pro-Text-Bold.otf in Resources */,
 				1A5F91182411ED8E007BEE4E /* SF-Pro-Text-Thin.otf in Resources */,
 				1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */,
@@ -263,6 +278,7 @@
 				1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */,
 				1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */,
 				1A5F911A2411ED8E007BEE4E /* SF-Pro-Text-Regular.otf in Resources */,
+				1A0D8A6824170D7A00075DC8 /* stillLoading.json in Resources */,
 				1A5F91192411ED8E007BEE4E /* SF-Pro-Text-Semibold.otf in Resources */,
 				1A5F911B2411ED8E007BEE4E /* SF-Pro-Text-Medium.otf in Resources */,
 			);
@@ -271,7 +287,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04F0F2FFC62F207115E05E65 /* [CP] Copy Pods Resources */ = {
+		4939240FD248873FAD15DA78 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,7 +304,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F9DF8922AFA2F6F29B49D3B /* [CP] Embed Pods Frameworks */ = {
+		9EE96B9B15D40F6E74E38153 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,7 +321,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		608E972C99FDF40E793291C8 /* [CP] Check Pods Manifest.lock */ = {
+		FF5B412283248DE1C765FAC2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,8 +357,8 @@
 				1AFC2E682412255B0066254E /* UIView - Ext.swift in Sources */,
 				1A5F910B24110C9D007BEE4E /* Location.swift in Sources */,
 				1AA2D96724138AF000CF5FC1 /* PageViewController.swift in Sources */,
-				1AA2D9712414755500CF5FC1 /* SearchResTableViewCell.swift in Sources */,
 				1A64A5CF2410F73400FD65CE /* AppDelegate.swift in Sources */,
+				1A7BC1D82416E85C008FA902 /* SplashVC.swift in Sources */,
 				1AA2D96B24144C9700CF5FC1 /* CurrentLocationVC.swift in Sources */,
 				1AA2D96F2414653000CF5FC1 /* LocationSearchVC.swift in Sources */,
 				1AA2D969241435DD00CF5FC1 /* CustomLocationVC.swift in Sources */,
@@ -488,7 +504,7 @@
 		};
 		1A64A5E02410F73500FD65CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0A42DEB0A152749D048B64B /* Pods-Dark Sky.debug.xcconfig */;
+			baseConfigurationReference = 01F5A00FC4CC96BCB62FFB73 /* Pods-Dark Sky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,7 +523,7 @@
 		};
 		1A64A5E12410F73500FD65CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6DD13CC0A350EADA8C33083 /* Pods-Dark Sky.release.xcconfig */;
+			baseConfigurationReference = BB18FE582D52368284289384 /* Pods-Dark Sky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
