@@ -23,7 +23,7 @@
 
 This is the last one-week mini-project of the MDB training program. It is a lightweight APP built to present weather data from the [Dark Sky](https://darksky.net/) API. It automatically retrieves current location and allows the user to search for other locations and store them for convenient access.  
 
-<img src="https://me.miclin.cc/static/darkSky.screen.jpg">
+<img src="https://me.miclin.cc/static/darkSky.banner.jpg">
 
 ## 💡 Highlights
 
