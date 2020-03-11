@@ -13,6 +13,7 @@ class CurrentLocationVC: ViewController {
     
     var loadingView: AnimationView!
     var blurEffectView: UIVisualEffectView!
+    var didLoadingAniFinished: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class CurrentLocationVC: ViewController {
         loadingView.center = view.center
         loadingView.contentMode = .scaleAspectFit
         
-        let blurEffect = UIBlurEffect(style: .prominent)
+        let blurEffect = UIBlurEffect(style: .dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.alpha = 0.9
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -31,6 +32,7 @@ class CurrentLocationVC: ViewController {
         self.view.addSubview(blurEffectView)
         blurEffectView.contentView.addSubview(loadingView)
         loadingView.play(completion: { complete in
+            self.didLoadingAniFinished = true
             self.loadingView.animation = Animation.named("stillLoading")
             self.loadingView.loopMode = .loop
             self.loadingView.play()
@@ -45,12 +47,21 @@ class CurrentLocationVC: ViewController {
     
     override func didUpdateWeather(sender: Location) {
         super.didUpdateWeather(sender: sender)
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.5, animations: {
+        let endLoadingCallback = {
+            UIView.animate(withDuration: 1, animations: {
                 self.blurEffectView.alpha = 0
             }, completion: { _ in
                 self.loadingView.stop()
                 self.blurEffectView.removeFromSuperview()
+            })
+        }
+        if self.didLoadingAniFinished {
+            DispatchQueue.main.async {
+                endLoadingCallback()
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                endLoadingCallback()
             })
         }
     }

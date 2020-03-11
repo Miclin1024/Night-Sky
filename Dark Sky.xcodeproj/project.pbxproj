@@ -10,7 +10,6 @@
 		1A0D8A6824170D7A00075DC8 /* stillLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A0D8A6724170D7A00075DC8 /* stillLoading.json */; };
 		1A13196D2411068800E29903 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A13196C2411068800E29903 /* Weather.swift */; };
 		1A5F910B24110C9D007BEE4E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F910A24110C9D007BEE4E /* Location.swift */; };
-		1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F910C24111046007BEE4E /* GoogleService-Info.plist */; };
 		1A5F910F2411CD28007BEE4E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5F910E2411CD28007BEE4E /* Manager.swift */; };
 		1A5F91132411ED68007BEE4E /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F91122411ED68007BEE4E /* SF-Pro-Text-Bold.otf */; };
 		1A5F91182411ED8E007BEE4E /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A5F91142411ED8D007BEE4E /* SF-Pro-Text-Thin.otf */; };
@@ -39,7 +38,6 @@
 		1A0D8A6724170D7A00075DC8 /* stillLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stillLoading.json; sourceTree = "<group>"; };
 		1A13196C2411068800E29903 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		1A5F910A24110C9D007BEE4E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		1A5F910C24111046007BEE4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A5F910E2411CD28007BEE4E /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		1A5F91122411ED68007BEE4E /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "Dark Sky/Resources/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = SOURCE_ROOT; };
 		1A5F91142411ED8D007BEE4E /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Thin.otf"; path = "Dark Sky/Resources/Fonts/SF-Pro-Text-Thin.otf"; sourceTree = SOURCE_ROOT; };
@@ -170,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				1A64A5DC2410F73500FD65CE /* Info.plist */,
-				1A5F910C24111046007BEE4E /* GoogleService-Info.plist */,
 				1A64A5CE2410F73400FD65CE /* AppDelegate.swift */,
 				1A64A5D02410F73400FD65CE /* SceneDelegate.swift */,
 				1AA2D9742414F46000CF5FC1 /* Secrets.plist */,
@@ -270,7 +267,6 @@
 				1A7BC1DA2416E91D008FA902 /* loading.json in Resources */,
 				1A5F91132411ED68007BEE4E /* SF-Pro-Text-Bold.otf in Resources */,
 				1A5F91182411ED8E007BEE4E /* SF-Pro-Text-Thin.otf in Resources */,
-				1A5F910D24111046007BEE4E /* GoogleService-Info.plist in Resources */,
 				1AFC2E662412163B0066254E /* SF-Pro-Text-Light.otf in Resources */,
 				1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */,
 				1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */,
