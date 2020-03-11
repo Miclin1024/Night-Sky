@@ -1,6 +1,5 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img src="https://me.miclin.cc/static/darkSky.load.gif" alt="Project logo" width=200px loop=false></a>
+ <img src="https://me.miclin.cc/static/darkSky.load.gif" alt="Project logo" width=200px loop=false>
 </p>
 <h1 align="center">ᴅᴀʀᴋ sᴋʏ</h1>
 
