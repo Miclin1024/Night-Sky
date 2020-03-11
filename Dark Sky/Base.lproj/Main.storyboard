@@ -15,31 +15,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--SplashVC-->
-        <scene sceneID="j5M-q6-oXN">
-            <objects>
-                <viewController id="cef-1d-3p2" customClass="SplashVC" customModule="Dark_Sky" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EpT-kK-D0y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-04-bGk" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
-                                <rect key="frame" x="186" y="92" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.090196078431372548" green="0.12549019607843137" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="B70-HD-vat"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kcS-4Q-2CM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1596" y="-271"/>
-        </scene>
         <!--Page View Controller-->
         <scene sceneID="UiU-Ro-7Px">
             <objects>
