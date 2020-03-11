@@ -24,7 +24,6 @@
 		1A64A5D62410F73400FD65CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D42410F73400FD65CE /* Main.storyboard */; };
 		1A64A5D82410F73500FD65CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D72410F73500FD65CE /* Assets.xcassets */; };
 		1A64A5DB2410F73500FD65CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A64A5D92410F73500FD65CE /* LaunchScreen.storyboard */; };
-		1A7BC1D82416E85C008FA902 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BC1D72416E85C008FA902 /* SplashVC.swift */; };
 		1A7BC1DA2416E91D008FA902 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A7BC1D92416E91D008FA902 /* loading.json */; };
 		1AA2D96724138AF000CF5FC1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D96624138AF000CF5FC1 /* PageViewController.swift */; };
 		1AA2D969241435DD00CF5FC1 /* CustomLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */; };
@@ -33,11 +32,10 @@
 		1AA2D9752414F46000CF5FC1 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2D9742414F46000CF5FC1 /* Secrets.plist */; };
 		1AFC2E662412163B0066254E /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */; };
 		1AFC2E682412255B0066254E /* UIView - Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC2E672412255B0066254E /* UIView - Ext.swift */; };
-		C44D603D77EE27C34074DF05 /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D250FA1C8F5D9106F2D220 /* Pods_Dark_Sky.framework */; };
+		284FB277EF2BA98CE0F69F9E /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685BF284D5A4155C142BFC82 /* Pods_Dark_Sky.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01F5A00FC4CC96BCB62FFB73 /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
 		1A0D8A6724170D7A00075DC8 /* stillLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stillLoading.json; sourceTree = "<group>"; };
 		1A13196C2411068800E29903 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		1A5F910A24110C9D007BEE4E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 		1A64A5D72410F73500FD65CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A64A5DA2410F73500FD65CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A64A5DC2410F73500FD65CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A7BC1D72416E85C008FA902 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		1A7BC1D92416E91D008FA902 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		1AA2D96624138AF000CF5FC1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationVC.swift; sourceTree = "<group>"; };
@@ -66,8 +63,9 @@
 		1AA2D9742414F46000CF5FC1 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		1AFC2E672412255B0066254E /* UIView - Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView - Ext.swift"; sourceTree = "<group>"; };
-		34D250FA1C8F5D9106F2D220 /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB18FE582D52368284289384 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
+		2190249F724045B9ED7AC3B8 /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
+		685BF284D5A4155C142BFC82 /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F8804BE7D1E0CC33E16930 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C44D603D77EE27C34074DF05 /* Pods_Dark_Sky.framework in Frameworks */,
+				284FB277EF2BA98CE0F69F9E /* Pods_Dark_Sky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +107,6 @@
 				1AA2D96624138AF000CF5FC1 /* PageViewController.swift */,
 				1AA2D968241435DD00CF5FC1 /* CustomLocationVC.swift */,
 				1AA2D96E2414653000CF5FC1 /* LocationSearchVC.swift */,
-				1A7BC1D72416E85C008FA902 /* SplashVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,7 +140,7 @@
 				1A64A5CD2410F73400FD65CE /* Dark Sky */,
 				1A64A5CC2410F73400FD65CE /* Products */,
 				E3F56E7E479AE65667A54412 /* Pods */,
-				2A52E4394FADFC65797940A5 /* Frameworks */,
+				F1E4194386BF9DD6541DAC1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,21 +187,21 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		2A52E4394FADFC65797940A5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				34D250FA1C8F5D9106F2D220 /* Pods_Dark_Sky.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E3F56E7E479AE65667A54412 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01F5A00FC4CC96BCB62FFB73 /* Pods-Dark Sky.debug.xcconfig */,
-				BB18FE582D52368284289384 /* Pods-Dark Sky.release.xcconfig */,
+				2190249F724045B9ED7AC3B8 /* Pods-Dark Sky.debug.xcconfig */,
+				B5F8804BE7D1E0CC33E16930 /* Pods-Dark Sky.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1E4194386BF9DD6541DAC1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				685BF284D5A4155C142BFC82 /* Pods_Dark_Sky.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,12 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A64A5DF2410F73500FD65CE /* Build configuration list for PBXNativeTarget "Dark Sky" */;
 			buildPhases = (
-				FF5B412283248DE1C765FAC2 /* [CP] Check Pods Manifest.lock */,
+				3B4057FBCD06B986F668D7C7 /* [CP] Check Pods Manifest.lock */,
 				1A64A5C72410F73400FD65CE /* Sources */,
 				1A64A5C82410F73400FD65CE /* Frameworks */,
 				1A64A5C92410F73400FD65CE /* Resources */,
-				9EE96B9B15D40F6E74E38153 /* [CP] Embed Pods Frameworks */,
-				4939240FD248873FAD15DA78 /* [CP] Copy Pods Resources */,
+				FE41E34F8D1B9329DFE017EF /* [CP] Embed Pods Frameworks */,
+				741CD34A5612E3214EBB937D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,41 +284,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4939240FD248873FAD15DA78 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9EE96B9B15D40F6E74E38153 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF5B412283248DE1C765FAC2 /* [CP] Check Pods Manifest.lock */ = {
+		3B4057FBCD06B986F668D7C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,6 +306,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		741CD34A5612E3214EBB937D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE41E34F8D1B9329DFE017EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -358,7 +355,6 @@
 				1A5F910B24110C9D007BEE4E /* Location.swift in Sources */,
 				1AA2D96724138AF000CF5FC1 /* PageViewController.swift in Sources */,
 				1A64A5CF2410F73400FD65CE /* AppDelegate.swift in Sources */,
-				1A7BC1D82416E85C008FA902 /* SplashVC.swift in Sources */,
 				1AA2D96B24144C9700CF5FC1 /* CurrentLocationVC.swift in Sources */,
 				1AA2D96F2414653000CF5FC1 /* LocationSearchVC.swift in Sources */,
 				1AA2D969241435DD00CF5FC1 /* CustomLocationVC.swift in Sources */,
@@ -504,7 +500,7 @@
 		};
 		1A64A5E02410F73500FD65CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01F5A00FC4CC96BCB62FFB73 /* Pods-Dark Sky.debug.xcconfig */;
+			baseConfigurationReference = 2190249F724045B9ED7AC3B8 /* Pods-Dark Sky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,7 +519,7 @@
 		};
 		1A64A5E12410F73500FD65CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB18FE582D52368284289384 /* Pods-Dark Sky.release.xcconfig */;
+			baseConfigurationReference = B5F8804BE7D1E0CC33E16930 /* Pods-Dark Sky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
