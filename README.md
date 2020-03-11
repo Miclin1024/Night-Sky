@@ -27,7 +27,7 @@ This is the last one-week mini-project of the MDB training program. It is a ligh
 
 ## 💡 Highlights
 
-- A concise, responsive, dark themed UI
+- Concise, responsive, dark themed UI
 - GMS backed location search
 - Vector animation powered by [lottie](http://airbnb.io/lottie/#/README)
 
