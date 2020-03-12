@@ -35,7 +35,7 @@ This is the last one-week mini-project of the MDB training program. It is a ligh
 - Swift 5
 - Cocoapod
 
-## 🏁 Install
+## 🏁 Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development.
 

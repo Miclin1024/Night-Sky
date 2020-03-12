@@ -25,7 +25,7 @@ class CurrentLocationVC: ViewController {
         
         let blurEffect = UIBlurEffect(style: .dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.alpha = 0.9
+        blurEffectView.alpha = 0.92
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.frame = self.view.bounds
 

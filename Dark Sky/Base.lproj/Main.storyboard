@@ -72,7 +72,7 @@
                                 <rect key="frame" x="307" y="234" width="52" height="60.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="uyT-mD-WQj">
-                                        <rect key="frame" x="6" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="6" y="0.0" width="40.000000000000227" height="40.000000000000227"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0sE-pi-MgP"/>
                                             <constraint firstAttribute="width" constant="40" id="Kdj-dk-dSf"/>
@@ -86,9 +86,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T0-ad-hHs">
-                                <rect key="frame" x="357" y="825" width="31" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T0-ad-hHs">
+                                <rect key="frame" x="363" y="832" width="31" height="44"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
                                 <state key="normal" title="􀁌">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,7 +106,9 @@
                             <constraint firstItem="s0y-gX-XtI" firstAttribute="top" secondItem="i72-TG-pcb" secondAttribute="bottom" constant="15" id="Fls-Ib-mVu"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KUt-vX-CoW"/>
                             <constraint firstAttribute="trailing" secondItem="i72-TG-pcb" secondAttribute="trailing" constant="100" id="Kck-dS-R30"/>
+                            <constraint firstAttribute="bottom" secondItem="3T0-ad-hHs" secondAttribute="bottom" constant="20" id="OFp-sF-NSM"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="QAG-un-tmy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3T0-ad-hHs" secondAttribute="trailing" constant="20" id="YeC-BI-e3m"/>
                             <constraint firstItem="AP7-DD-sge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eT9-e2-R9r"/>
                             <constraint firstItem="nu8-oV-HtX" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="10" id="gHv-mg-ksy"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="70" id="inr-bI-EkT"/>
@@ -195,7 +196,7 @@
                                 <rect key="frame" x="307" y="234" width="52" height="60.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-oc-sdZ">
-                                        <rect key="frame" x="6" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="6" y="0.0" width="40.000000000000227" height="40.000000000000227"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="glF-Jb-QcK"/>
                                             <constraint firstAttribute="height" constant="40" id="jL7-4b-IC7"/>
@@ -210,10 +211,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-hN-tKt">
-                                <rect key="frame" x="364" y="790" width="30" height="86"/>
+                                <rect key="frame" x="363" y="788" width="31" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cag-zP-Znk">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="43"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="30" height="44"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="25"/>
                                         <state key="normal" title="􀁎">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -223,7 +224,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XV-c1-zce">
-                                        <rect key="frame" x="0.0" y="43" width="30" height="43"/>
+                                        <rect key="frame" x="0.0" y="44" width="31" height="44"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
                                         <state key="normal" title="􀁌">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -274,6 +275,6 @@
         <image name="windBearing" width="833.5" height="833.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lvb-Ph-hyd"/>
+        <segue reference="jWo-rZ-lvU"/>
     </inferredMetricsTieBreakers>
 </document>
