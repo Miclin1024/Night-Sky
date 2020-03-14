@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController, locationUpdateDelegate {
 
@@ -31,10 +32,10 @@ class ViewController: UIViewController, locationUpdateDelegate {
         weather.setFont(toType: .Semibold, toSize: 17)
     }
     
-    func getWobbleAnimation(withInitialRotation angle: CGFloat) -> CAKeyframeAnimation {
+    func getWobbleAnimation(withInitialRotation angle: CGFloat, strength: CGFloat) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: "transform")
 
-        animation.values = [NSValue(caTransform3D: CATransform3DMakeRotation(angle + 0.08, 0.0, 0.0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle - 0.06 , 0, 0, 1.0)), NSValue(caTransform3D: CATransform3DMakeRotation(angle + 0.1 , 0, 0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle - 0.1 , 0, 0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle + 0.11 , 0, 0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle - 0.13 , 0, 0, 1.0))]
+        animation.values = [NSValue(caTransform3D: CATransform3DMakeRotation(angle + 0.08 * strength, 0.0, 0.0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle - 0.06 * strength, 0, 0, 1.0)), NSValue(caTransform3D: CATransform3DMakeRotation(angle + 0.1 * strength, 0, 0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle - 0.1 * strength, 0, 0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle + 0.11 * strength, 0, 0, 1.0)),NSValue(caTransform3D: CATransform3DMakeRotation(angle - 0.13 * strength, 0, 0, 1.0))]
         animation.autoreverses = true
         animation.duration = 0.55
         animation.repeatCount = Float.infinity
@@ -45,13 +46,12 @@ class ViewController: UIViewController, locationUpdateDelegate {
         guard let weather = sender.weather else {return}
         DispatchQueue.main.async {
             
-            UIView.transition(with: self.locationNameLabel, duration: 0.6, options: [.transitionFlipFromBottom, .curveEaseInOut], animations: {
-                self.locationNameLabel.text = sender.name
-            }, completion: nil)
+            self.locationNameLabel.text = sender.name
+             self.locationNameLabel.setSpringAnimation(type: "zoomIn", curve: "easeIn", duration: 1.0)
+            self.locationNameLabel.setSpringOffset(x: 0, y: -20, scale: 1)
+             self.locationNameLabel.springAnimate()
             
-            UIView.transition(with: self.locationTempLabel, duration: 0.6, options: [.transitionFlipFromBottom, .curveEaseInOut], animations: {
-                self.locationTempLabel.text = String(Int(weather.temperature)) + "°"
-            }, completion: nil)
+            self.locationTempLabel.text = String(Int(weather.temperature)) + "°"
             
             self.weatherTypeImage.image = UIImage(named: weather.weatherType.rawValue)
         
@@ -61,7 +61,7 @@ class ViewController: UIViewController, locationUpdateDelegate {
             self.weather.text = weatherText
         
             self.windBearing.transform = CGAffineTransform(rotationAngle: (CGFloat(weather.windBearing) * .pi) / 180)
-            self.windBearing.layer.add(self.getWobbleAnimation(withInitialRotation: CGFloat(weather.windBearing) * .pi / 180), forKey: "transform")
+            self.windBearing.layer.add(self.getWobbleAnimation(withInitialRotation: CGFloat(weather.windBearing) * .pi / 180, strength: CGFloat(weather.windSpeed / 10)), forKey: "transform")
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.weatherTypeImage.alpha = 1

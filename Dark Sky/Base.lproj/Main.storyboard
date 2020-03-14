@@ -72,7 +72,7 @@
                                 <rect key="frame" x="307" y="234" width="52" height="60.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="uyT-mD-WQj">
-                                        <rect key="frame" x="6" y="0.0" width="40.000000000000227" height="40.000000000000227"/>
+                                        <rect key="frame" x="6" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0sE-pi-MgP"/>
                                             <constraint firstAttribute="width" constant="40" id="Kdj-dk-dSf"/>
@@ -87,7 +87,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T0-ad-hHs">
-                                <rect key="frame" x="363" y="832" width="31" height="44"/>
+                                <rect key="frame" x="364" y="833" width="30" height="43"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
                                 <state key="normal" title="􀁌">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,7 +196,7 @@
                                 <rect key="frame" x="307" y="234" width="52" height="60.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-oc-sdZ">
-                                        <rect key="frame" x="6" y="0.0" width="40.000000000000227" height="40.000000000000227"/>
+                                        <rect key="frame" x="6" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="glF-Jb-QcK"/>
                                             <constraint firstAttribute="height" constant="40" id="jL7-4b-IC7"/>
@@ -211,10 +211,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-hN-tKt">
-                                <rect key="frame" x="363" y="788" width="31" height="88"/>
+                                <rect key="frame" x="364" y="790" width="30" height="86"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cag-zP-Znk">
-                                        <rect key="frame" x="0.5" y="0.0" width="30" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="43"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="25"/>
                                         <state key="normal" title="􀁎">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,7 +224,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XV-c1-zce">
-                                        <rect key="frame" x="0.0" y="44" width="31" height="44"/>
+                                        <rect key="frame" x="0.0" y="43" width="30" height="43"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="26"/>
                                         <state key="normal" title="􀁌">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

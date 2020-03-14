@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Spring
 
-class DataDisplayUILabel: UILabel {
+class DataDisplayUILabel: SpringLabel {
     
     let fontNamePrefix = "SFProText-"
 
@@ -27,8 +28,25 @@ class DataDisplayUILabel: UILabel {
     }
     
     func labelSetup() {
-        self.font = getFont(size: 20, type: .Bold)
-        self.textColor = .white
+        font = getFont(size: 20, type: .Bold)
+        textColor = .white
+    }
+    
+    func setSpringAnimation(type: String, curve: String, duration: CGFloat) {
+        animation = type
+        self.curve = curve
+        self.duration = duration
+    }
+    
+    func setSpringOffset(x: CGFloat, y: CGFloat, scale: CGFloat) {
+        self.x = x
+        self.y = y
+        self.scaleX = scale
+        self.scaleY = scale
+    }
+    
+    func springAnimate() {
+        self.animate()
     }
     
     func getFont(size: CGFloat, type: fontType) -> UIFont {
@@ -37,10 +55,10 @@ class DataDisplayUILabel: UILabel {
     }
     
     func setTextSize(to size: CGFloat) {
-        self.font = self.font.withSize(size)
+        font = font.withSize(size)
     }
     
     func setFont(toType type: fontType, toSize size: CGFloat) {
-        self.font = getFont(size: size, type: type)
+        font = getFont(size: size, type: type)
     }
 }

@@ -9,5 +9,6 @@ target 'Dark Sky' do
   pod 'lottie-ios'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 end
