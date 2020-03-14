@@ -27,6 +27,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     func newVC(index: Int) -> ViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "custom") as! ViewController
         sb.selfLocation = Manager.shared.userLocations[index]
+        Weather.forcast(withLocation: sb.selfLocation)
         return sb
     }
     
@@ -46,8 +47,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let index = firstVC.selfLocation.selfIndex
         self.pageControl.currentPage = index
         Manager.shared.currActiveIndex = index
-        Manager.shared.userLocations[index].delegate = firstVC
-        Weather.forcast(withLocation: Manager.shared.userLocations[index])
+        firstVC.selfLocation.delegate = firstVC
+        firstVC.didUpdateWeather(sender: firstVC.selfLocation)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {

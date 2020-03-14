@@ -31,7 +31,7 @@
 		1AA2D9752414F46000CF5FC1 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2D9742414F46000CF5FC1 /* Secrets.plist */; };
 		1AFC2E662412163B0066254E /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */; };
 		1AFC2E682412255B0066254E /* UIView - Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC2E672412255B0066254E /* UIView - Ext.swift */; };
-		B20FE56792E22A92CBD0F11D /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8B2BF8331D21751C09A525 /* Pods_Dark_Sky.framework */; };
+		702EAB74C0A1C61147179B14 /* Pods_Dark_Sky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD6B72999869D08004EED0 /* Pods_Dark_Sky.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +61,9 @@
 		1AA2D9742414F46000CF5FC1 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		1AFC2E652412163B0066254E /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		1AFC2E672412255B0066254E /* UIView - Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView - Ext.swift"; sourceTree = "<group>"; };
-		81519789F878152A73582A92 /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
-		E2817C67143B0AA5CAF6F1F6 /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
-		FE8B2BF8331D21751C09A525 /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6107E5E7D986720B08EFEA4D /* Pods-Dark Sky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.release.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.release.xcconfig"; sourceTree = "<group>"; };
+		6ADBCFADCDA31FF86417BAE7 /* Pods-Dark Sky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Sky.debug.xcconfig"; path = "Target Support Files/Pods-Dark Sky/Pods-Dark Sky.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AD6B72999869D08004EED0 /* Pods_Dark_Sky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Sky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20FE56792E22A92CBD0F11D /* Pods_Dark_Sky.framework in Frameworks */,
+				702EAB74C0A1C61147179B14 /* Pods_Dark_Sky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,7 @@
 				1A64A5CD2410F73400FD65CE /* Dark Sky */,
 				1A64A5CC2410F73400FD65CE /* Products */,
 				E3F56E7E479AE65667A54412 /* Pods */,
-				38820269AA6AF148C8E6B67E /* Frameworks */,
+				D8668D2972DE55ADFB09D601 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,10 +184,10 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
-		38820269AA6AF148C8E6B67E /* Frameworks */ = {
+		D8668D2972DE55ADFB09D601 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE8B2BF8331D21751C09A525 /* Pods_Dark_Sky.framework */,
+				A0AD6B72999869D08004EED0 /* Pods_Dark_Sky.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,8 +195,8 @@
 		E3F56E7E479AE65667A54412 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				81519789F878152A73582A92 /* Pods-Dark Sky.debug.xcconfig */,
-				E2817C67143B0AA5CAF6F1F6 /* Pods-Dark Sky.release.xcconfig */,
+				6ADBCFADCDA31FF86417BAE7 /* Pods-Dark Sky.debug.xcconfig */,
+				6107E5E7D986720B08EFEA4D /* Pods-Dark Sky.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -208,12 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A64A5DF2410F73500FD65CE /* Build configuration list for PBXNativeTarget "Dark Sky" */;
 			buildPhases = (
-				4D6E063541757B1460B0A904 /* [CP] Check Pods Manifest.lock */,
+				CF3622B70F635594076E2E92 /* [CP] Check Pods Manifest.lock */,
 				1A64A5C72410F73400FD65CE /* Sources */,
 				1A64A5C82410F73400FD65CE /* Frameworks */,
 				1A64A5C92410F73400FD65CE /* Resources */,
-				6FA2B6D3677642F1EABFEC0A /* [CP] Embed Pods Frameworks */,
-				EE277F4055E6F38AA6898EDD /* [CP] Copy Pods Resources */,
+				9E4B359EE468F0F1CB951D44 /* [CP] Embed Pods Frameworks */,
+				62B58C9BDAE4CBC336B5DE7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,7 +280,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D6E063541757B1460B0A904 /* [CP] Check Pods Manifest.lock */ = {
+		62B58C9BDAE4CBC336B5DE7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E4B359EE468F0F1CB951D44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF3622B70F635594076E2E92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,40 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6FA2B6D3677642F1EABFEC0A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE277F4055E6F38AA6898EDD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dark Sky/Pods-Dark Sky-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,7 +496,7 @@
 		};
 		1A64A5E02410F73500FD65CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81519789F878152A73582A92 /* Pods-Dark Sky.debug.xcconfig */;
+			baseConfigurationReference = 6ADBCFADCDA31FF86417BAE7 /* Pods-Dark Sky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,7 +515,7 @@
 		};
 		1A64A5E12410F73500FD65CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2817C67143B0AA5CAF6F1F6 /* Pods-Dark Sky.release.xcconfig */;
+			baseConfigurationReference = 6107E5E7D986720B08EFEA4D /* Pods-Dark Sky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

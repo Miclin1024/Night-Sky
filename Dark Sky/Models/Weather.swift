@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import UIKit
+import SwiftyJSON
 
 class Weather: Decodable {
     
@@ -26,6 +27,8 @@ class Weather: Decodable {
     let precipIntensity: Double
     let windBearing: Int
     let windSpeed: Double
+    let tempMax: Double
+    let tempMin: Double
     
     enum CodingKeys: String, CodingKey {
         case current = "currently"
@@ -36,6 +39,10 @@ class Weather: Decodable {
     
     enum WeatherKeys: String, CodingKey {
         case time, summary, icon, nearestStormDistance, precipIntensity, precipIntensityError, precipProbability, precipType, temperature, apparentTemperature, dewPoint, humidity, pressure, windSpeed, windGust, windBearing, cloudCover, uvIndex, visibility, ozone
+    }
+    
+    enum DailyWrapperKey: String, CodingKey {
+        case summary, icon, data
     }
     
     enum AlertKeys: String, CodingKey {
@@ -52,8 +59,28 @@ class Weather: Decodable {
         self.windBearing = try currContainer.decode(Int.self, forKey: .windBearing)
         self.windSpeed = try currContainer.decode(Double.self, forKey: .windSpeed)
         
+        let dailyContainer = try container.nestedContainer(keyedBy: DailyWrapperKey.self, forKey: .daily)
+        let dailyData = try dailyContainer.decode([DailyData].self, forKey: .data)
+        self.tempMax = dailyData.first!.tempMax
+        self.tempMin = dailyData.first!.tempMin
+        
         self.weatherType = .clear
         self.weatherType = getWeatherType(fromString: icon)
+    }
+    
+    class DailyData: Decodable {
+        let tempMax: Double
+        let tempMin: Double
+        
+        enum DataKey: String, CodingKey {
+            case temperatureLow, temperatureHigh, moonPhase
+        }
+        
+        required init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: DataKey.self)
+            self.tempMin = try container.decode(Double.self, forKey: .temperatureLow)
+            self.tempMax = try container.decode(Double.self, forKey: .temperatureHigh)
+        }
     }
     
     func getWeatherType(fromString string: String) -> WeatherType {

@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mxs-50-vR8">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mxs-50-vR8" userLabel="Main Data">
                                 <rect key="frame" x="152" y="194" width="110.5" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sMh-Jx-lbI" userLabel="Name" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
@@ -51,7 +51,10 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP7-DD-sge" userLabel="Temp Range" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
-                                <rect key="frame" x="207" y="224" width="0.0" height="0.0"/>
+                                <rect key="frame" x="147" y="224" width="120" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="tap-1V-EZE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -69,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-oV-HtX" userLabel="Wind Bearing">
-                                <rect key="frame" x="307" y="234" width="52" height="60.5"/>
+                                <rect key="frame" x="287" y="194" width="52" height="60.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="uyT-mD-WQj">
                                         <rect key="frame" x="6" y="0.0" width="40" height="40"/>
@@ -99,7 +102,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.090196078431372548" green="0.12549019607843137" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nu8-oV-HtX" firstAttribute="leading" secondItem="AP7-DD-sge" secondAttribute="leading" constant="100" id="3Fl-Ko-zxT"/>
+                            <constraint firstItem="nu8-oV-HtX" firstAttribute="leading" secondItem="AP7-DD-sge" secondAttribute="trailing" constant="20" id="3Fl-Ko-zxT"/>
                             <constraint firstItem="Mxs-50-vR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8YH-Ov-giJ"/>
                             <constraint firstItem="Mxs-50-vR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="EZW-p5-D4C"/>
                             <constraint firstItem="AP7-DD-sge" firstAttribute="top" secondItem="Mxs-50-vR8" secondAttribute="bottom" constant="10" id="FfL-2y-veN"/>
@@ -110,7 +113,7 @@
                             <constraint firstItem="i72-TG-pcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="QAG-un-tmy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3T0-ad-hHs" secondAttribute="trailing" constant="20" id="YeC-BI-e3m"/>
                             <constraint firstItem="AP7-DD-sge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eT9-e2-R9r"/>
-                            <constraint firstItem="nu8-oV-HtX" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="10" id="gHv-mg-ksy"/>
+                            <constraint firstItem="nu8-oV-HtX" firstAttribute="top" secondItem="Mxs-50-vR8" secondAttribute="bottom" constant="-20" id="gHv-mg-ksy"/>
                             <constraint firstItem="i72-TG-pcb" firstAttribute="top" secondItem="AP7-DD-sge" secondAttribute="bottom" constant="70" id="inr-bI-EkT"/>
                             <constraint firstItem="s0y-gX-XtI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="irE-ZI-izr"/>
                         </constraints>
@@ -155,7 +158,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-vO-34L">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-vO-34L" userLabel="Main Data">
                                 <rect key="frame" x="152" y="194" width="110.5" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4qf-HX-RwU" userLabel="Name" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
@@ -175,7 +178,10 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLa-G7-nPg" userLabel="Temp Range" customClass="DataDisplayUILabel" customModule="Dark_Sky" customModuleProvider="target">
-                                <rect key="frame" x="207" y="224" width="0.0" height="0.0"/>
+                                <rect key="frame" x="147" y="224" width="120" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="y0X-2y-bLh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -193,7 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-ej-vag" userLabel="Wind Bearing">
-                                <rect key="frame" x="307" y="234" width="52" height="60.5"/>
+                                <rect key="frame" x="287" y="194" width="52" height="60.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windBearing" translatesAutoresizingMaskIntoConstraints="NO" id="JlH-oc-sdZ">
                                         <rect key="frame" x="6" y="0.0" width="40" height="40"/>
@@ -210,7 +216,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-hN-tKt">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-hN-tKt" userLabel="Control Btns">
                                 <rect key="frame" x="364" y="790" width="30" height="86"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cag-zP-Znk">
@@ -243,12 +249,12 @@
                             <constraint firstItem="Fft-ER-JrS" firstAttribute="trailing" secondItem="OZq-hN-tKt" secondAttribute="trailing" constant="20" id="4gS-Wu-nim"/>
                             <constraint firstItem="XLa-G7-nPg" firstAttribute="top" secondItem="tLH-vO-34L" secondAttribute="bottom" constant="10" id="71g-BO-qmI"/>
                             <constraint firstItem="XLa-G7-nPg" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="9Xs-Xl-jMe"/>
-                            <constraint firstItem="D8g-ej-vag" firstAttribute="top" secondItem="XLa-G7-nPg" secondAttribute="bottom" constant="10" id="B8x-Fw-bfz"/>
+                            <constraint firstItem="D8g-ej-vag" firstAttribute="top" secondItem="tLH-vO-34L" secondAttribute="bottom" constant="-20" id="B8x-Fw-bfz"/>
                             <constraint firstItem="9f1-aX-ZnK" firstAttribute="top" secondItem="XLa-G7-nPg" secondAttribute="bottom" constant="70" id="DHv-qW-ekn"/>
                             <constraint firstItem="tLH-vO-34L" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="EO8-xf-byj"/>
                             <constraint firstAttribute="bottom" secondItem="OZq-hN-tKt" secondAttribute="bottom" constant="20" id="OIW-Xs-Hqb"/>
                             <constraint firstItem="8Qs-PA-aGl" firstAttribute="top" secondItem="9f1-aX-ZnK" secondAttribute="bottom" constant="15" id="TMT-lR-zS7"/>
-                            <constraint firstItem="D8g-ej-vag" firstAttribute="leading" secondItem="XLa-G7-nPg" secondAttribute="leading" constant="100" id="eZo-mk-B6K"/>
+                            <constraint firstItem="D8g-ej-vag" firstAttribute="leading" secondItem="XLa-G7-nPg" secondAttribute="trailing" constant="20" id="eZo-mk-B6K"/>
                             <constraint firstItem="9f1-aX-ZnK" firstAttribute="centerX" secondItem="Z7V-8r-eFy" secondAttribute="centerX" id="shC-ty-m6B"/>
                             <constraint firstItem="9f1-aX-ZnK" firstAttribute="leading" secondItem="Z7V-8r-eFy" secondAttribute="leading" constant="100" id="w93-st-IrT"/>
                             <constraint firstItem="tLH-vO-34L" firstAttribute="top" secondItem="Fft-ER-JrS" secondAttribute="top" constant="150" id="wAq-Xr-dtn"/>

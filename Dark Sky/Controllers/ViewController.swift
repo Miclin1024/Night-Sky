@@ -53,6 +53,8 @@ class ViewController: UIViewController, locationUpdateDelegate {
             
             self.locationTempLabel.text = String(Int(weather.temperature)) + "°"
             
+            self.tempRangeLabel.text = String(Int(weather.tempMin)) + "°  -  " + String(Int(weather.tempMax)) + "°"
+            
             self.weatherTypeImage.image = UIImage(named: weather.weatherType.rawValue)
         
             self.windSpeedLabel.text = String(Int(weather.windSpeed)) + " MPH"
