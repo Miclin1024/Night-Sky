@@ -21,6 +21,7 @@ class ViewController: UIViewController, locationUpdateDelegate {
     @IBOutlet weak var weather: DataDisplayUILabel!
     
     var selfLocation: Location!
+    var pageViewController: UIPageViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()

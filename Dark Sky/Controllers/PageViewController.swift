@@ -27,6 +27,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     func newVC(index: Int) -> ViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "custom") as! ViewController
         sb.selfLocation = Manager.shared.userLocations[index]
+        sb.pageViewController = self
         Weather.forcast(withLocation: sb.selfLocation)
         return sb
     }
@@ -97,7 +98,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         Manager.shared.userLocations.remove(at: delIndex)
         Manager.shared.delUserLocation(atIndex: delIndex)
         self.pageControl.numberOfPages = self.orderedVC.count
-        setViewControllers([orderedVC[delIndex - 1]], direction: .reverse, animated: true)
+        setViewControllers([orderedVC[delIndex - 1]], direction: .reverse, animated: true, completion: { _ in
+            // Re-enable swipe gesture after the transition
+            self.isPagingEnabled = true
+        })
     }
 
     override func viewDidLoad() {
@@ -115,6 +119,27 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         if let currentVC = orderedVC.first {
             Manager.shared.userLocations[0].delegate = currentVC
             setViewControllers([currentVC], direction: .forward, animated: true, completion: nil)
+        }
+    }
+}
+
+extension UIPageViewController {
+    var isPagingEnabled: Bool {
+        get {
+            var isEnabled: Bool = true
+            for view in view.subviews {
+                if let subView = view as? UIScrollView {
+                    isEnabled = subView.isScrollEnabled
+                }
+            }
+            return isEnabled
+        }
+        set {
+            for view in view.subviews {
+                if let subView = view as? UIScrollView {
+                    subView.isScrollEnabled = newValue
+                }
+            }
         }
     }
 }
