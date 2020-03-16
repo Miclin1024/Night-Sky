@@ -12,7 +12,7 @@ class Manager {
     
     static let shared = Manager()
     
-    weak var delegate: pageViewUpdateDelegate?
+    weak var delegate: PageViewUpdateDelegate?
     
     // First location will be user's current location
     var userLocations: [Location]
