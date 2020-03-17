@@ -17,11 +17,7 @@ class Manager {
     // First location will be user's current location
     var userLocations: [Location]
     
-    var currActiveIndex: Int
-    
     init() {
-        self.currActiveIndex = 0
-        
         // A placeholder location
         let currLocation = Location()
         userLocations = [currLocation]

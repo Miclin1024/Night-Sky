@@ -84,10 +84,10 @@ extension UIPageViewController {
 
 extension PageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        print("fire")
         let firstVC = pendingViewControllers.first as! ViewController
         let index = firstVC.selfLocation.selfIndex
         self.pageControl.currentPage = index
-        Manager.shared.currActiveIndex = index
         firstVC.selfLocation.delegate = firstVC
         firstVC.didUpdateWeather(sender: firstVC.selfLocation)
     }

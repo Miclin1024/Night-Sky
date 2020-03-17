@@ -27,7 +27,7 @@ class Location {
             
         }
     }
-    weak var delegate: locationUpdateDelegate?
+    weak var delegate: LocationUpdateDelegate?
     
     init (withName location: String, completion: @escaping (Location)->Void={_ in}) {
         self.name = location

@@ -9,7 +9,7 @@
 import UIKit
 import Spring
 
-class ViewController: UIViewController, locationUpdateDelegate {
+class ViewController: UIViewController, LocationUpdateDelegate {
 
     @IBOutlet weak var locationNameLabel: DataDisplayUILabel!
     @IBOutlet weak var locationTempLabel: DataDisplayUILabel!
@@ -75,6 +75,6 @@ class ViewController: UIViewController, locationUpdateDelegate {
     }
 }
 
-protocol locationUpdateDelegate: AnyObject {
+protocol LocationUpdateDelegate: AnyObject {
     func didUpdateWeather(sender: Location)
 }
