@@ -11,5 +11,6 @@ target 'Dark Sky' do
   pod 'GooglePlaces'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Haptica'
 
 end

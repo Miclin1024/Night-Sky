@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haptica
 
 class CustomLocationVC: ViewController {
 
@@ -18,6 +19,7 @@ class CustomLocationVC: ViewController {
     @IBAction func delCustomLocationCallback(_ sender: Any) {
         // Disable swipe gesture during transition
         self.pageViewController.isPagingEnabled = false
+        Haptic.play(".O---O.", delay: 0)
         let sender = sender as! UIButton
         sender.isUserInteractionEnabled = false
         Manager.shared.delegate?.didDelUserLocation(delIndex: selfLocation.selfIndex)
