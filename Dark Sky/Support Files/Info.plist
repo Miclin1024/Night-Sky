@@ -18,8 +18,25 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FirebaseScreenReportingEnabled</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Obtaining weather condition at current location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Obtaining weather condition at current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Obtaining weather condition at current location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Pro-Text-Bold.otf</string>
+		<string>SF-Pro-Text-Light.otf</string>
+		<string>SF-Pro-Text-Medium.otf</string>
+		<string>SF-Pro-Text-Regular.otf</string>
+		<string>SF-Pro-Text-Semibold.otf</string>
+		<string>SF-Pro-Text-Thin.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -52,8 +69,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -61,23 +76,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Obtaining weather condition at current location</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Obtaining weather condition at current location</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Obtaining weather condition at current location</string>
-	<key>FirebaseScreenReportingEnabled</key>
-	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>SF-Pro-Text-Bold.otf</string>
-		<string>SF-Pro-Text-Light.otf</string>
-		<string>SF-Pro-Text-Medium.otf</string>
-		<string>SF-Pro-Text-Regular.otf</string>
-		<string>SF-Pro-Text-Semibold.otf</string>
-		<string>SF-Pro-Text-Thin.otf</string>
 	</array>
 </dict>
 </plist>
