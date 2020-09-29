@@ -48,9 +48,9 @@ class ViewController: UIViewController, LocationUpdateDelegate {
         DispatchQueue.main.async {
             
             self.locationNameLabel.text = sender.name
-             self.locationNameLabel.setSpringAnimation(type: "zoomIn", curve: "easeIn", duration: 1.0)
+            self.locationNameLabel.setSpringAnimation(type: "zoomIn", curve: "easeIn", duration: 1.0)
             self.locationNameLabel.setSpringOffset(x: 0, y: -20, scale: 1)
-             self.locationNameLabel.springAnimate()
+            self.locationNameLabel.springAnimate()
             
             self.locationTempLabel.text = String(Int(weather.temperature)) + "°"
             
