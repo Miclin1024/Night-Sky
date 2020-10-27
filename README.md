@@ -20,15 +20,15 @@
 
 ## 🚀 About
 
-This is the last one-week mini-project of the MDB training program. The lightweight App was built to present weather data from the [Dark Sky](https://darksky.net/) API. It automatically retrieves user's current physical location and allows the user to search for other locations and store them for convenient access.  
+The minimalist weather App was built to present data from the [Dark Sky](https://darksky.net/) API. It automatically retrieves user's physical location and also allows them to search and save additional locations for convenient access.  
 
 <img src="https://me.miclin.cc/static/darkSky.banner.jpg">
 
 ## 💡 Highlights
 
-- Concise, responsive, dark themed UI
-- GMS backed location search
-- Vector animation powered by [lottie](http://airbnb.io/lottie/#/README)
+- Customized `UIPageViewController`
+- Location search implemented with Google Places API
+- Vector animation powered by [lottie](http://airbnb.io/lottie/#/README) and Adobe After Effect
 
 ## ⛓️ Dependencies
 
@@ -60,4 +60,4 @@ Install all the cocoapod dependencies
 ```
 pod install
 ```
-Open the project with Xcode, but for it to run we will need to the secret key of [Dark Sky](https://darksky.net/dev) and [GMS Place](https://developers.google.com/places/web-service/intro) API. Once you have those, add the keys to `Dark Sky/Support Files/Secrets.plist`
+Open the project with Xcode, but for it to run we will need to the secret token of [Dark Sky](https://darksky.net/dev) and [GMS Places](https://developers.google.com/places/web-service/intro) API. Once you have those, add the keys to `Dark Sky/Support Files/Secrets.plist`
