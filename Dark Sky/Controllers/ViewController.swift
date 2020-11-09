@@ -19,6 +19,7 @@ class ViewController: UIViewController, LocationUpdateDelegate {
     @IBOutlet weak var windBearing: UIImageView!
     @IBOutlet weak var windStackView: UIStackView!
     @IBOutlet weak var weather: DataDisplayUILabel!
+
     
     var selfLocation: Location!
     var pageViewController: UIPageViewController!
