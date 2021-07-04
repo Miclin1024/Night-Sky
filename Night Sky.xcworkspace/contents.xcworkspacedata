@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Dark Sky.xcodeproj">
+      location = "group:/Users/miclin/Projects/Night Sky/Night Sky.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Night Sky.xcodeproj">
    </FileRef>
 </Workspace>

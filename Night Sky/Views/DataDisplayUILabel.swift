@@ -11,7 +11,7 @@ import Spring
 
 class DataDisplayUILabel: SpringLabel {
     
-    let fontNamePrefix = "SFProText-"
+    let fontNamePrefix = "SF-Pro-Text-"
 
     enum fontType: String {
         case Bold, Medium, Regular, Semibold, Thin, Light
@@ -51,7 +51,7 @@ class DataDisplayUILabel: SpringLabel {
     
     func getFont(size: CGFloat, type: fontType) -> UIFont {
         let fontName = fontNamePrefix + type.rawValue
-        return UIFont(name: fontName, size: size)!
+        return UIFont(name: fontName, size: size) ?? .systemFont(ofSize: size)
     }
     
     func setTextSize(to size: CGFloat) {
