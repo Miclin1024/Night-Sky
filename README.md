@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://me.miclin.cc/static/darkSky.load.gif" alt="Project logo" width=200px loop=false>
+ <img src="https://miclin.me/static/darkSky.load.gif" alt="Project logo" width=200px loop=false>
 </p>
 <h1 align="center">ɴɪɢʜᴛ sᴋʏ</h1>
 
